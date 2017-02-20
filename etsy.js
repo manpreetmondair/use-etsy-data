@@ -31,7 +31,7 @@ var woodItems = items.filter(function(item){
     return item.materials.includes('wood');
 });
     woodItems.forEach(function(item){
-        console.log(item.title)
+        console.log(item.title + ' is made of wood.')
     })
 
 // find which items are made of eight or more materials
@@ -40,11 +40,11 @@ var woodItems = items.filter(function(item){
             return item.materials.length >= 8;
         });
     numberOfItems.forEach(function(item){
-        console.log(item.title, item.materials.join('\n'))// \n is used for new line 
+        console.log(item.title + ' has ' + item.materials.length + ' materials:'+('\n')+ item.materials.join('\n'))// \n is used for new line 
     })
 
 //  how to calculate how many items were made by their sellers
-var seller = items.filter(function(item){
+var seller = items.filter(function(item){ 
     return item.who_made.includes('i_did');
 });
 console.log(seller.length + ' were made by their sellers')
